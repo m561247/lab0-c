@@ -111,6 +111,7 @@ bool q_delete_mid(struct list_head *head)
     while (back != forward && back->prev != forward) {
         forward = forward->next;
         back = back->prev;
+        back = back->prev;
     }
     list_del(forward);
     element_t *node = list_entry(forward, element_t, list);
